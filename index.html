@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            
+        }
+        .main{
+            width: 90vh;
+            aspect-ratio: 1;
+            display: table; /* Set display to table */
+            table-layout: fixed; /* Set table layout to fixed */
+            border: solid 1px #000;
+            /* border-collapse: collapse; */
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="size" id="size" value="10">
+    <button onclick="make()">make</button>
+    <table class="main" id="main">
+
+    </table>
+</body>
+</html>
