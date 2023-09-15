@@ -29,11 +29,11 @@ let val;
 let x;
 while(cont<(size*size))
 {
-    console.log(i,j)
-    console.log(pile)
+   
+   
     while(m[i][j].done||((i==0||m[i-1][j].done==true)&&(i==size-1||m[i+1][j].done==true)&&(j==0||m[i][j-1].done==true)&&(j==size-1||m[i][j+1].done==true)))
     {
-        console.log(i,j,'inside')
+       
         if(!m[i][j].done)
         {
             m[i][j].done=true;
@@ -49,12 +49,12 @@ while(cont<(size*size))
                 if(x==2){m[i][j].right=true;m[i][j+1].left=true}
                 if(x==3){m[i][j].up=true;m[i-1][j].down=true}
             }
-            console.log(i,j,'after pop')
+           
             if(cont>(size*size)){break;}
         }
         else
         {
-            console.log(i,j,'in else')
+           
             x=pile2.pop();
             j=pile.pop();
             i=pile.pop();
@@ -64,7 +64,7 @@ while(cont<(size*size))
                 if(x==1){m[i][j].left=true;m[i][j-1].right=true}
                 if(x==2){m[i][j].right=true;m[i][j+1].left=true}
                 if(x==3){m[i][j].up=true;m[i-1][j].down=true}
-                console.log("x=",x)
+               
             }
         }
     }
