@@ -39,9 +39,9 @@ while(cont<(size*size))
             m[i][j].done=true;
             cont++;
             if(cont>(size*size)){break;}
-            x=pile2.pop();
-            j=pile.pop();
-            i=pile.pop();
+            i=pile.shift();
+            j=pile.shift();
+            x=pile2.shift();
             if(!m[i][j].done)
             {
                 if(x==0){m[i][j].down=true;m[i+1][j].up=true}
@@ -55,9 +55,9 @@ while(cont<(size*size))
         else
         {
            
-            x=pile2.pop();
-            j=pile.pop();
-            i=pile.pop();
+            i=pile.shift();
+            j=pile.shift();
+            x=pile2.shift();
             if(!(m[i][j].done||((i==0||m[i-1][j].done==true)&&(i==size-1||m[i+1][j].done==true)&&(j==0||m[i][j-1].done==true)&&(j==size-1||m[i][j+1].done==true))))
             {
                 if(x==0){m[i][j].down=true;m[i+1][j].up=true}
